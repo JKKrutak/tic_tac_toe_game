@@ -1,0 +1,11 @@
+<h1> CREATING NEW PLAYER </h1>
+
+<%= form_with model: @player, local: true do |form| %>
+	<p>
+		<%= form.label :name %><br>
+		<%= form.text_field :name %>
+	</p>
+	<div class="actions">
+		<%= form.submit "Create player" %>
+	</div>
+<% end %>
