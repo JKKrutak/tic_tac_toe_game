@@ -1,0 +1,9 @@
+<h1>New game!</h1>
+Enter size of board (1 - 10)
+	<%= form_with model: @game, local: true do |form| %>
+		<%= form.label :size, "Enter board size" %>
+		<%= form.number_field :size, min: 1, max: 10, step: 1 %>
+		<div class="actions">
+			<%= form.submit "Create Game" %>
+		</div>
+	<% end %>

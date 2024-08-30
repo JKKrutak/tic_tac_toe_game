@@ -1,7 +1,7 @@
 <h1> Hello! Wanna play game?</h1>
 
-<p>New Game:</p>
-<%= link_to image_tag("tictac.png", width:80, height:80), "game/new" %>
-<p>New player</p>
-<%= link_to 'Create new player!', 'player/show' %> <!-- Here this player/new seems like not the best solution. Fix please -->
-<p>Already have an account</p>
+<p>New Game</p>
+<%= link_to image_tag("tictac.png", width:80, height:80), "games/new" %>
+<br>
+<%= link_to 'Create new player!', 'players/new' %> <!-- Here this player/new seems like not the best solution. Fix please -->
+<p><%= link_to 'Already have an account', 'session/new' %> </p>

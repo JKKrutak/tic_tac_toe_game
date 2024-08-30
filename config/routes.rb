@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
-	resources :game
-	resources :player do
-		post 'create'
-	end
+  get 'session/new'
+  get 'session/create'
+  get 'session/destroy'
+  get '/login', to: 'player#show'
+  post '/login', to: 'player#show'
+	resources :games
+	resources :players 
 
 	root 'dashboard#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
