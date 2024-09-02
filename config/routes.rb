@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
-  get 'session/new'
-  get 'session/create'
-  get 'session/destroy'
-  get '/login', to: 'player#show'
-  post '/login', to: 'player#show'
+  get 'sessions/new'
+  get 'sessions/create'
+  get 'sessions/destroy'
+  get '/login_failure', to: 'sessions#login_failure'
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
+  
+  #get '/login', to: 'players#show'
+  #post '/login', to: 'players#show'
 	resources :games
 	resources :players 
 

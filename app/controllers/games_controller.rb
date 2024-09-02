@@ -2,6 +2,10 @@ class GamesController < ApplicationController
 	def new
 		@game = Game.new
 	end
+	def show
+		@game = Game.find(params[:id])
+		@player = Player.find(session[:player_id])
+	end
 	
 	def create
 
