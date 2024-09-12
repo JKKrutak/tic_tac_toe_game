@@ -6,11 +6,15 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
+	resource :ticgames do
+		post 'make_move'
+	end
   
   #get '/login', to: 'players#show'
   #post '/login', to: 'players#show'
 	resources :games
 	resources :players 
+	resources :ticgames
 
 	root 'dashboard#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

@@ -1,0 +1,14 @@
+<h1> Let's begin </h1>
+<h2> Game ID: <%= @game.id %> </h2>
+
+<table>
+<tr>
+<% for i in 0..@game.state.length()-1 %>
+<th><%= button_to @game.state[i], action: "make_move", id: @game.id, index: i %></th>
+	<% if (i+1) % @row_length == 0 %>
+</tr>
+	<% end %>
+<% end %>
+</tr>
+</table>
+

@@ -1,0 +1,7 @@
+<h1>Create new game!</h1>
+
+<%= form_with model: @ticgame, url: ticgames_path do |form| %>
+	<%= form.label "Board size:" %> 
+	<%= form.number_field :size, step: 1, max: 10, min: 3 %>
+	<%= form.submit "Create game!" %>
+<% end %>
